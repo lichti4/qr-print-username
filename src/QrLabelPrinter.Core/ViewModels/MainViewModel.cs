@@ -85,7 +85,7 @@ public sealed class MainViewModel : ViewModelBase
 
             _printer = await _configSource.GetForComputerAsync(ComputerName, ct);
             PrinterName = _printer.PrinterName;
-            PrinterAddress = $"{_printer.PrinterIp}:{_printer.Port}";
+            PrinterAddress = $"{_printer.PrinterIp}:{_printer.Port} ({_printer.PrinterName})";
 
             var matrix = _qr.CreateMatrix(_user.LabelUsername);
             var layout = LabelLayoutCalculator.Calculate(_user, _printer, matrix.GetLength(0));
@@ -118,7 +118,7 @@ public sealed class MainViewModel : ViewModelBase
         try
         {
             await _printService.PrintOneAsync(_user!, _printer!);
-            StatusMessage = $"1 Etikett wurde an {PrinterName} ({PrinterAddress}) gesendet. "
+            StatusMessage = $"1 Etikett wurde an {PrinterAddress} gesendet. "
                           + "Hinweis: Das bestätigt nur die Übertragung, nicht den tatsächlichen Ausdruck.";
         }
         catch (Exception ex) when (ex is PrintException or ConfigException or LabelLayoutException)

@@ -232,7 +232,7 @@ public class MainViewModelTests
         Assert.Equal("Mustermann", vm.LastName);
         Assert.Equal("CLIENT-001", vm.ComputerName);
         Assert.Equal("Zebra-Lager", vm.PrinterName);
-        Assert.Equal("10.10.10.51:9100", vm.PrinterAddress);
+        Assert.Equal("10.10.10.51:9100 (Zebra-Lager)", vm.PrinterAddress);
         Assert.NotNull(vm.Preview);
         Assert.Equal("MMUSTERMANN", vm.Preview!.Layout.Qr.Data);
         Assert.True(vm.CanPrint);
