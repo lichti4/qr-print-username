@@ -249,7 +249,7 @@ public class MainViewModelTests
         Assert.Equal(1, print.Calls);
         await vm.PrintCommand.ExecuteAsync();
         Assert.Equal(2, print.Calls);
-        Assert.True(vm.StatusMessage!.Contains("nicht den tatsächlichen Ausdruck"));
+        Assert.Contains("nicht den tatsächlichen Ausdruck", vm.StatusMessage);
     }
 
     [Fact]

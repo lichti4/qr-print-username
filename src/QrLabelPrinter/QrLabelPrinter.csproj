@@ -10,10 +10,16 @@
     <AssemblyName>QrLabelPrinter</AssemblyName>
     <RootNamespace>QrLabelPrinter</RootNamespace>
     <ApplicationTitle>QR-Etikettendruck</ApplicationTitle>
+    <ApplicationIcon>Resources\app.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\QrLabelPrinter.Core\QrLabelPrinter.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Fenster-Icon (Taskleiste/Titelleiste) -->
+    <Resource Include="Resources\app.ico" />
   </ItemGroup>
 
   <ItemGroup>
