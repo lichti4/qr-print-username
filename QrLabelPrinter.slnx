@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="src/QrLabelPrinter.Core/QrLabelPrinter.Core.csproj" />
+  <Project Path="src/QrLabelPrinter/QrLabelPrinter.csproj" />
+  <Project Path="tests/QrLabelPrinter.Tests/QrLabelPrinter.Tests.csproj" />
+</Solution>

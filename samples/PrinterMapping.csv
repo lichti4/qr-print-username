@@ -1,0 +1,3 @@
+ComputerName;PrinterName;PrinterIP;Port;DPI;LabelWidthMm;LabelHeightMm
+CLIENT-001;Zebra-Lager;10.10.10.51;9100;203;50;30
+CLIENT-002;Zebra-Wareneingang;10.10.10.52;9100;300;100;60
